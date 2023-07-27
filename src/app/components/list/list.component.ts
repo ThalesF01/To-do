@@ -7,37 +7,29 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
 
-  tarefa:string = '';
-  filtro = "Fazer"
-  itemsToDo: string[] = ['1','2','3','4','5']
-  itemsFeitos: string[] = []
+  tarefa: string = '';
+  filtro: 'Todos' | 'Feitos' | 'Fazer' = 'Fazer';
+  itemsToDo: string[] = ['1', '2', '3', '4', '5'];
+  itemsFeitos: string[] = [];
 
-  Todos(){
-    this.filtro = 'Todos'
+  setFiltro(filtro: 'Todos' | 'Feitos' | 'Fazer') {
+    this.filtro = filtro;
   }
 
-  Feitos(){
-    this.filtro = 'Feitos'
-  }
-
-  Fazer(){
-    this.filtro = 'Fazer'
-  }
-
-  addTarefa(){
-    if (this.tarefa != ''){
-      this.itemsToDo.push(this.tarefa)
-      this.tarefa = ''
+  addTarefa() {
+    if (this.tarefa) {
+      this.itemsToDo.push(this.tarefa);
+      this.tarefa = '';
     }
   }
 
-  removeTarefa(index:number,item:string){
-    this.itemsToDo.splice(index, 1)
-    this.itemsFeitos.push(item)
+  removeTarefa(index: number, item: string) {
+    this.itemsToDo.splice(index, 1);
+    this.itemsFeitos.push(item);
   }
 
-  removeFeitos(){
-    this.itemsFeitos = []
+  removeFeitos() {
+    this.itemsFeitos = [];
   }
 
 }
