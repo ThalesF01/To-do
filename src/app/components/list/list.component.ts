@@ -9,7 +9,7 @@ export class ListComponent {
 
   tarefa: string = '';
   filtro: 'Todos' | 'Feitos' | 'Fazer' = 'Fazer';
-  itemsToDo: string[] = ['1', '2', '3', '4', '5'];
+  itemsToDo: string[] = [];
   itemsFeitos: string[] = [];
 
   setFiltro(filtro: 'Todos' | 'Feitos' | 'Fazer') {

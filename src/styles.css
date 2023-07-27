@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: helvetica;
+    color: hsla(0, 0%, 98%, 0.733);
+
 }
 
 .imagem{
@@ -17,3 +19,33 @@
     background-color: hsl(235, 21%, 11%);
     height: 62vh;
 }
+
+/* Personaliza a barra de rolagem no Google Chrome, Safari e outros navegadores WebKit */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #c2bfbf; /* Cor do polegar da barra de rolagem */
+    border-radius: 5px; /* Borda arredondada para o polegar */
+  }
+  
+  /* Personaliza a barra de rolagem no Firefox */
+  ::-moz-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  ::-moz-scrollbar-thumb {
+    background-color: #c2bfbf; /* Cor do polegar da barra de rolagem */
+    border-radius: 5px; /* Borda arredondada para o polegar */
+  }
+  
+  /* Personaliza a barra de rolagem no Internet Explorer */
+  ::-ms-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  ::-ms-scrollbar-thumb {
+    background-color: #c2bfbf; /* Cor do polegar da barra de rolagem */
+    border-radius: 5px; /* Borda arredondada para o polegar */
+  }

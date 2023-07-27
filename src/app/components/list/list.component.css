@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 34%;
+  width: 39%;
   height: 85%;
   display: flex;
   flex-direction: column;
@@ -44,18 +44,18 @@ input:focus {
   outline: none;
 }
 
-.text button {
+button {
   cursor: pointer;
   border-radius: 15px;
   border: none;
   height: 30px;
-  width: 93px;
+  width: 100px;
   background-color: hsl(235, 21%, 11%);
   color: white;
   transition: all 0.3s ease-in-out; /* Substitui as duas propriedades de transição */
 }
 
-.text button:hover {
+button:hover {
   letter-spacing: 0.7px;
 }
 
@@ -66,3 +66,74 @@ input:focus {
   margin-top: 25px;
   height: 410px;
 }
+
+.tarefas ul{
+  height: 90%;
+  list-style: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarefas ul h2{
+  padding: 15px;
+}
+
+.tarefas ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem;
+  color: hsla(0, 0%, 98%, 0.479);
+  border-bottom: 1px solid hsla(0, 0%, 98%, 0.479);
+  height: 20px;
+}
+
+.tarefas ul li img{
+  height: 20px;
+  width: 20px;
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tarefas ul li img:hover{
+  transform: scale(1.2)
+}
+
+.links{
+  border-top: 1px solid hsla(0, 0%, 98%, 0.479);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 15px;
+  height: 25px;
+
+}
+
+.filtros{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  
+}
+
+.filtros a{
+  cursor: pointer;
+  padding: 2px;
+  transition: all 0.3s ease-in-out;
+  color: hsla(0, 0%, 98%, 0.479);
+  
+}
+
+.filtros a:hover{
+  color: hsla(0, 0%, 98%, 0.733);
+  transform: scale(1.2)
+}
+
+.links button{
+  border-radius: 7px;
+}
+

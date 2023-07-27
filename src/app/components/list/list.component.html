@@ -10,37 +10,47 @@
     </div>
   
     <div class="tarefas">
+      
       <ul *ngIf="filtro === 'Fazer'; else feitosList">
+        <h2>Para fazer:</h2>
         <li *ngFor="let itemToDo of itemsToDo; let i = index">
-          {{ itemToDo }}
-          <button (click)="removeTarefa(i, itemToDo)">Remover</button>
+          <p>{{i + 1}} - {{ itemToDo }}</p>
+          <img src="../../../assets/images/simbolo-x.png" alt="x" (click)="removeTarefa(i, itemToDo)">
         </li>
       </ul>
   
       <ng-template #feitosList>
         <ul *ngIf="filtro === 'Feitos'">
+          <h2>Feitos:</h2>
           <li *ngFor="let itemFeito of itemsFeitos">
             {{ itemFeito }}
+            
           </li>
-          <button (click)="removeFeitos()">Limpar Concluídos</button>
+          
         </ul>
   
         <ul *ngIf="filtro === 'Todos'">
           <h2>Para fazer:</h2>
           <li *ngFor="let itemToDo of itemsToDo; let i = index">
             {{ itemToDo }}
-            <button (click)="removeTarefa(i, itemToDo)">Remover</button>
+            <img src="../../../assets/images/simbolo-x.png" alt="x" (click)="removeTarefa(i, itemToDo)">
           </li>
           <h2>Feitos:</h2>
           <li *ngFor="let itemFeito of itemsFeitos">{{ itemFeito }}</li>
         </ul>
       </ng-template>
   
-      <p>{{ itemsToDo.length }} itens restantes</p>
+      
   
-      <a (click)="setFiltro('Todos')">todos</a>
-      <a (click)="setFiltro('Feitos')">Feitos</a>
-      <a (click)="setFiltro('Fazer')">Fazer</a>
-    </div>
+      <div class="links">
+        <p>{{ itemsToDo.length }} itens restantes</p>
+        <div class="filtros">
+          <a (click)="setFiltro('Todos')">Todos</a>
+          <a (click)="setFiltro('Feitos')">Feitos</a>
+          <a (click)="setFiltro('Fazer')">Fazer</a>  
+        </div>
+        <button (click)="removeFeitos()">Limpar Feitos</button>
+      </div>
+      </div>
   </div>
   
