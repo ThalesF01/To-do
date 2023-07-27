@@ -1,0 +1,10 @@
+<a (click)="Todos()">todos</a>
+<a (click)="Feitos()">Feitos</a>
+<a (click)="Fazer()">Fazer</a>
+
+<input type="text" [(ngModel)]="tarefa">
+<button (click)="addTarefa()">Adicionar</button>
+
+<ul *ngIf="filtro==='Fazer'">
+    <li *ngFor="let item of items"> {{item}}</li>
+</ul>
