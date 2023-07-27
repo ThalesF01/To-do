@@ -1,0 +1,67 @@
+.tudo{
+  position: absolute;
+  
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  top: 42%; /* Ajuste a posição verticalmente */
+  left: 50%; /* Ajuste a posição horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o elemento */
+  z-index: 1; /* Coloca o elemento sobre a imagem (z-index maior que 0) */
+  padding: 2rem;
+  margin: 50px;
+  width: 34%;
+  height: 75%;
+  
+}
+
+.topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 95%;
+}
+
+.text{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  height:53px;
+  width: 100%;
+  border-radius: 7px;
+  background-color: hsl(235, 24%, 19%);
+}
+
+.text input{
+  background-color: transparent;
+  width: 67%;
+  height: 90%;
+  font-size: 19px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input{
+  color: white;
+}
+
+.text button{
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  height: 30px;
+  width: 93px;
+  background-color: hsl(235, 21%, 11%);
+  color: white;
+  transition-duration: 0.3s; 
+  transition-timing-function: ease-in-out;
+}
+
+.text button:hover{
+  letter-spacing: 0.7px;
+}

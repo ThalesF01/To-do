@@ -9,7 +9,8 @@ export class ListComponent {
 
   tarefa:string = '';
   filtro = "Fazer"
-  items: string[] = []
+  itemsToDo: string[] = ['1','2','3','4','5']
+  itemsFeitos: string[] = []
 
   Todos(){
     this.filtro = 'Todos'
@@ -24,7 +25,19 @@ export class ListComponent {
   }
 
   addTarefa(){
-    this.items.push(this.tarefa)
+    if (this.tarefa != ''){
+      this.itemsToDo.push(this.tarefa)
+      this.tarefa = ''
+    }
+  }
+
+  removeTarefa(index:number,item:string){
+    this.itemsToDo.splice(index, 1)
+    this.itemsFeitos.push(item)
+  }
+
+  removeFeitos(){
+    this.itemsFeitos = []
   }
 
 }

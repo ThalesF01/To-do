@@ -1,10 +1,46 @@
-<a (click)="Todos()">todos</a>
-<a (click)="Feitos()">Feitos</a>
-<a (click)="Fazer()">Fazer</a>
+<div class="tudo">
 
-<input type="text" [(ngModel)]="tarefa">
-<button (click)="addTarefa()">Adicionar</button>
+    <div class="topo">
+        <h1 class="titulo">T O D O</h1>
+        <a href="">TEMA</a>
+    </div>
 
-<ul *ngIf="filtro==='Fazer'">
-    <li *ngFor="let item of items"> {{item}}</li>
-</ul>
+
+    <div class="text">
+        <input type="text" [(ngModel)]="tarefa">
+        <button (click)="addTarefa()">Adicionar</button>
+    </div>
+
+
+    <div class="tarefas">
+
+        <ul *ngIf="filtro==='Fazer'">
+            <li *ngFor="let itemToDo of itemsToDo; let i = index"> {{itemToDo}}
+                <button (click)="removeTarefa(i, itemToDo)">Remover</button>
+            </li>
+        </ul>
+        
+        <ul *ngIf="filtro==='Feitos'">
+            <li *ngFor="let itemFeito of itemsFeitos"> {{itemFeito}}
+            </li>
+            <button (click)="removeFeitos()">Limpar Concluidos</button>
+        </ul>
+        
+        <ul *ngIf="filtro==='Todos'">
+            <h2>Para fazer:</h2>
+            <li *ngFor="let itemToDo of itemsToDo; let i = index"> {{itemToDo}}
+                <button (click)="removeTarefa(i, itemToDo)">Remover</button>
+            </li>
+            <h2>Feitos:</h2>
+            <li *ngFor="let itemFeito of itemsFeitos"> {{itemFeito}}</li>
+        </ul>
+        
+        <p>{{itemsToDo.length}} itens restantes</p>
+        
+        <a (click)="Todos()">todos</a>
+        <a (click)="Feitos()">Feitos</a>
+        <a (click)="Fazer()">Fazer</a>
+
+    </div>
+
+</div>
